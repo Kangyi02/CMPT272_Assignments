@@ -1,0 +1,165 @@
+header {
+    background-color: rgb(54, 63, 72);
+    padding: 10px;
+}
+
+#headerfirst {
+    color:rgba(213, 97, 7, 0.908);
+    font-family:Arial, Helvetica, sans-serif;
+    font-weight: normal;
+    opacity: 100%;
+    flex-wrap: wrap;
+}
+
+#headersecond {
+    color:white;
+    font-family:Arial, Helvetica, sans-serif;
+    font-weight: normal;
+    flex-wrap: wrap;
+}
+
+.menu {
+    position: fixed;
+    right: 50px;
+}
+
+@media only screen and (max-width: 500px) {
+    header {
+        font-size: small;
+    }
+}
+
+body {
+    background-color: rgb(225, 225, 225);
+}
+
+.container{
+    width: 100%;
+    margin: 0 auto;
+}
+
+.leftsection{
+    float: left;
+    width: 47.5%;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.leftsection h3{
+    font-size: x-large;
+    font-weight: 500;
+}
+
+.leftsection p{
+    margin-left: 1em;
+}
+
+.rightsection{
+    float: right;
+    width: 47.5%;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.rightsection ul{
+    list-style-type:disc;
+    color: black;
+}
+
+.rightsection h3{
+    font-size: x-large;
+    font-weight: 500;
+}
+
+@media screen and (max-width: 550px) {
+    .leftsection, .rightsection {
+        width: 100%;
+        float: none;
+    }
+}
+
+.info {
+    display: none;
+}
+
+.faculty {
+    color: brown;
+    text-decoration: none;
+}
+
+.faculty:hover {
+    opacity: 0.5;
+}
+
+.faculty:hover + .info {
+    display: block;
+}
+
+.info h3 {
+    font-size: large;
+}
+
+.details {
+    margin-left: 1.5em;
+}
+
+main {
+    display: flex; 
+    flex-wrap: wrap;
+    column-gap: 10px;  
+}
+
+.image {
+    flex: 1;
+    margin-top: 20px;    
+    background-color: white;
+    position: relative;
+}
+
+.image img {
+    width: 100%;
+}
+
+.image p {
+    margin-left: 2em;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+.see {
+    opacity: 0;
+    color: white;
+    background-color: rgb(239, 76, 30);
+    margin-left: 2em;
+    margin-bottom: 1em;
+    border: none;
+    padding: 10px 15px;
+    transition: 1s;
+    border-radius: 10%;
+}
+
+.image:hover {
+    box-shadow: 9px 8px 8px rgb(193, 188, 188);
+}
+
+.image:hover > .see {
+    display: block;
+    opacity: 0.5;
+}
+
+@media screen and (max-width: 770px) {
+    .image {
+        flex-basis: calc(50% - 20px);
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .image {
+        flex-basis: calc(100% - 20px);
+    }
+}
+
+.back {
+    color:rgb(143, 8, 8);
+    padding-top: 60px;
+    border: none;
+    background-color: transparent;
+    text-decoration: none;
+}
