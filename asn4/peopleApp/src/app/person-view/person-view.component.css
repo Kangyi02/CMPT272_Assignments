@@ -1,0 +1,36 @@
+img {
+    width: 400px;
+    border-radius: 2%;
+}
+
+.info {
+    font-family: "Comic Sans MS", cursive, sans-serif;
+    text-decoration: none;
+    background-color: white;
+    color: black;
+    font-size: medium;
+    border-radius: 2%;
+    border: 2px solid rgb(170, 205, 240);
+    margin-bottom: 20px;
+}
+
+.textInfo {
+    margin-left: 20px;
+    margin-bottom: 20px;
+}
+
+.beButton {
+    margin-top: 0.5em;
+    background-color: transparent;
+    border-color: rgb(203, 207, 211); 
+    text-align: center; 
+    display: inline-block; 
+    border-radius: 5%;
+}
+
+.modifyButton {
+    border: none;
+    border-bottom: 1.5px solid rgb(170, 205, 240); 
+    background-color: transparent; 
+    color: rgb(170, 205, 240);
+}

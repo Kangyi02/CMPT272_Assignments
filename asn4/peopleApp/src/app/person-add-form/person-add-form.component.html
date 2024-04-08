@@ -1,0 +1,54 @@
+<app-map></app-map>
+
+<form id="myForm" [formGroup]="form" (ngSubmit)="onSubmit(form.value)">
+    <fieldset class="d-grid gap-2 col-12">
+        <br>
+            <h3>REPORT BADDIE</h3>
+            <input type="text" name="reporter" placeholder="REPORTER NAME" formControlName="reporter"> 
+            <input type="text" name="phoneNumber" placeholder="PHONE NUMBER" formControlName="phoneNumber">
+            <input type="text" name="baddie" formControlName="baddieName" placeholder="BADDIE NAME">
+            <!-- <select name="location" formControlName="location">
+            <option value="" disabled selected>choose one</option>
+            <option *ngFor="let location of locationList">
+              {{ location }}
+            </option>
+          </select> -->
+            <input type="text" list="myselect" name="location" formControlName="location"
+                placeholder="INPUT OR SELECT A LOCATION" />
+            <datalist id="myselect">
+                <option *ngFor="let location of locationList">{{ location }}</option>
+            </datalist>
+            <input type="text" name="longtitude" formControlName="longtitude" placeholder="LANGTITUDE"> 
+            <input type="text" name="latitude" formControlName="latitude" placeholder="LATITUDE"> 
+            <input type="text" name="detail" formControlName="detail" placeholder="DETAIL"> 
+            <input type="text" id="pictureInput" formControlName="picture"
+                placeholder="UPLOAD PHTOT: assets/img/m1.png">
+        <!-- <div class="form-check">
+            <input 
+                type="checkbox"
+                name="status_checkbox"
+                id="status_checkbox"
+                formControlName="status"
+                class="form-check-input"
+            >
+            <label class="form-check-label" for="status_checkbox">
+                UNSOLVED
+            </label>
+        </div> -->
+
+        <button class="btn btn-outline-primary" [disabled]="!form.valid">
+            SAVE
+        </button>
+    </fieldset>
+
+    <span *ngIf="form.controls['reporter'].errors as reporter_error">{{reporter_error|json}}</span>
+    <span *ngIf="form.controls['phoneNumber'].errors as phoneNumber_error">{{phoneNumber_error|json}}</span>
+    <span *ngIf="form.controls['baddieName'].errors as baddieName_error">{{baddieName_error|json}}</span>
+    <span *ngIf="form.controls['location'].errors as location_error">{{location_error|json}}</span>
+    <span *ngIf="form.controls['longtitude'].errors as longtitude_error">{{longtitude_error|json}}</span>
+    <span *ngIf="form.controls['latitude'].errors as latitude_error">{{latitude_error|json}}</span>
+    <span *ngIf="form.controls['detail'].errors as detail_error">{{detail_error|json}}</span>
+    <!-- <span *ngIf="form.controls['status'].errors as status_error">{{status_error|json}}</span> -->
+    <span *ngIf="form.controls['picture'].errors as picture_error">{{picture_error|json}}</span>
+
+</form>

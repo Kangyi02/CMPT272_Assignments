@@ -1,0 +1,71 @@
+<app-map></app-map>
+
+<form id="myFormm"
+    [formGroup]="form"
+    (ngSubmit)="onBackInfo(form.value)"
+>
+    <fieldset
+        class="d-grid gap-2 col-12"
+    >
+<div>
+    <br>
+<h3>Edit Baddie Info</h3>
+
+<div>
+<label>Reporter:</label>
+<input type="text" name="reporter" value="{{ person.reporter }}" 
+formControlName="reporter">
+</div>
+
+<div>
+    <label>Reporter's PhoneNumber:</label>
+<input type="text" name="phoneNumber" value="{{person.phoneNumber}}" placeholder="123"
+formControlName="phoneNumber">
+</div>
+<div>
+<label>Baddie's Name:</label>
+<input type="text" name="baddie" formControlName="baddieName" 
+value="{{ person.baddieName }}">
+</div>
+<div>
+<label>Location:</label>
+<input type="text" list="myselect" name="location" formControlName="location" placeholder="INPUT OR SELECT A LOCATION"/>
+        <datalist id="myselect">
+            <option *ngFor="let location of locationList">{{ location }}</option>
+        </datalist>
+</div>
+<div>
+<label>Longtitude:</label>
+<input type="text" name="longtitude" formControlName="longtitude" 
+value="{{ person.longtitude }}">
+</div>
+<div>
+<label>Latitude:</label>
+<input type="text" name="latitude" formControlName="latitude" 
+value="{{ person.latitude }}">
+</div>
+
+<div>
+<label>Detail:</label>
+<input type="text" name="detail" formControlName="detail" 
+value="{{ person.detail }}">
+</div>
+<div>
+<label>Photo URL:</label>
+<input type="text" id="pictureInput" formControlName="picture" 
+value="{{ person.picture }}">
+</div>
+</div>
+
+<button id="backToIntoButton" class="backButton">SUBMIT</button>
+
+    </fieldset>
+    <span *ngIf="form.controls['reporter'].errors as reporter_error">{{reporter_error|json}}</span>
+    <span *ngIf="form.controls['phoneNumber'].errors as phoneNumber_error">{{phoneNumber_error|json}}</span>
+    <span *ngIf="form.controls['baddieName'].errors as baddieName_error">{{baddieName_error|json}}</span>
+    <span *ngIf="form.controls['location'].errors as location_error">{{location_error|json}}</span>
+    <span *ngIf="form.controls['longtitude'].errors as longtitude_error">{{longtitude_error|json}}</span>
+    <span *ngIf="form.controls['latitude'].errors as latitude_error">{{latitude_error|json}}</span>
+    <span *ngIf="form.controls['detail'].errors as detail_error">{{detail_error|json}}</span>
+    <span *ngIf="form.controls['picture'].errors as picture_error">{{picture_error|json}}</span>
+</form>

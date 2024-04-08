@@ -1,0 +1,39 @@
+ .createReport {
+    font-family: "Comic Sans MS", cursive, sans-serif;
+    text-decoration: none;
+    background-color: rgb(161, 195, 228);
+    color: white;
+    font-size:x-large;
+    border-radius: 5%;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+   }
+
+p {
+    font-family: "Comic Sans MS", cursive, sans-serif;
+    color: rgb(161, 195, 228);
+    font-style: normal;
+    font-variant: normal;
+    text-transform: none;
+}
+
+input {
+   border: 2px outset rgb(161, 195, 228);
+   border-radius: 35px 35px 35px 35px;
+}
+
+table {
+   width: 700px;
+   padding: 3px 4px; 
+   font-family: "Comic Sans MS", cursive, sans-serif;
+   background-color: rgb(161, 195, 228);
+   border-collapse: collapse;
+   padding: 3px 4px;
+   border: 1px solid rgba(227, 224, 224, 0.523);
+   color:white;
+}
+
+
+

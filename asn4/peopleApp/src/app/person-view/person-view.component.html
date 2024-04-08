@@ -1,0 +1,37 @@
+<div class="info">
+<img src="{{ person.picture }}" alt="baddie phtot">
+<div class="textInfo">
+<p>Baddie's Name: {{ person.baddieName }}</p>
+<p>Location: {{ person.location }} </p>
+<p>Reported by: {{ rName }} ({{ person.phoneNumber }}) </p>
+<p>Time: {{person.time | date:'yyyy-MM-dd (hh:mm a)' | uppercase}}</p>
+
+<p style="display: inline;">Status: <span *ngIf="person.status; then ins else notins"></span></p>
+<ng-template #ins><b>RESOLVED</b></ng-template>
+<ng-template #notins><b>OPEN </b></ng-template>
+
+<div *ngIf="showPasswordDialog" class="password-dialog">
+    <h2>Confirm Password</h2>
+    <input type="password" [(ngModel)]="enteredPassword" placeholder="Enter Password">
+    <button (click)="confirmPassword()">Confirm</button>
+    <button (click)="cancelPassword()">Cancel</button>
+</div>
+<button class="modifyButton" id="modifyButton" style="display: inline;" (click)="openPasswordDialog()">CHANGE</button>
+<div *ngIf="showModifyDialog" class="modify-dialog">
+    <h2>Modify Status</h2>
+    <div class="form-check">
+        <input type="checkbox" [(ngModel)]="enteredStatus" name="status_checkbox" id="status_checkbox" class="form-check-input">
+        <label class="form-check-label" for="status_checkbox">
+            RESOLVED
+        </label>
+    </div>
+    <button (click)="submitStatus()">Submit</button>
+    <button (click)="cancelModify()">Cancel</button>
+</div>
+<p>Extra Info:</p>
+<p>{{ person.detail }}</p>
+
+<button id="backButton" class="beButton" (click)="onBack()">BACK</button>
+<button id="editButton" class="beButton" (click)="onEdit()">EDIT</button>
+</div>
+</div>

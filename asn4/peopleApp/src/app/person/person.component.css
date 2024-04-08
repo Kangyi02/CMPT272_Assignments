@@ -1,0 +1,33 @@
+p {
+    width: 70vw;
+    padding: 1em;
+    margin: 1em;
+    border-radius: 0.5em;
+    user-select: none;
+    text-align: center;
+}
+
+button {
+    margin-top: 0.5em;
+    background-color: transparent; 
+    border: none; 
+    border-bottom: 1.5px solid white; 
+    text-align: center;
+    text-decoration: none; 
+    display: inline-block;
+    cursor: pointer; 
+    outline: none; 
+    color: white;
+}
+
+.instructor-style {
+    color:black;
+}
+
+:host{display: contents; }
+
+
+tr {
+    border: 1px solid rgba(227, 224, 224, 0.523);
+}
+

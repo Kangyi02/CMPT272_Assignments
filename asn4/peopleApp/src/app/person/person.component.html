@@ -1,0 +1,22 @@
+<ng-container *ngTemplateOutlet="content"></ng-container>
+
+<ng-template #content>
+<!-- <tr appColors [ngClass]="{ 'status-style': person.status}">  -->
+<tr>
+    <td>{{person.location}}</td>
+    <td>{{person.reporter}}</td>
+    <td>{{person.time | date:'yyyy-MM-dd (hh:mm a)' | uppercase}}</td>
+    <td><span *ngIf="person.status; then ins else notins"></span></td>
+    <ng-template #ins><b>RESOLVED</b></ng-template>
+    <ng-template #notins><b>OPEN</b></ng-template>
+    <td><button id="show" class="moreInfoButton" (click)="onView()">MORE INFO</button></td>
+    <td><button id="delete" class="deleteButton" (click)="openPasswordDialog()">X</button></td>
+    <div *ngIf="showPasswordDialog" class="password-dialog">
+        <h4>Confirm Password</h4>
+        <input type="password" [(ngModel)]="enteredPassword" placeholder="Enter Password">
+        <button (click)="onDelete($event, person.reporter)">Confirm</button>
+        <button (click)="cancelPassword()">Cancel</button>
+    </div>
+<!-- </tr> -->
+</tr>
+</ng-template>
