@@ -1,0 +1,30 @@
+<div class="header">
+<p style="display: inline;">SEARCH: </p>
+<input id="myInput" style="display: inline;" type="text" [(ngModel)]="query">
+{{ query }} <br>
+<p>
+    Number of people: {{ people | search:query | countPeople}}
+</p>
+</div>
+<app-map></app-map>
+
+<table class="displayTable">
+    <thead>
+        <tr>
+            <th (click)="sortTable('location')">Location</th>
+            <th (click)="sortTable('baddieName')">Baddie's Name</th>
+            <th (click)="sortTable('time')">Time Reported</th>
+            <th (click)="sortTable('status')">Status</th>
+            <th></th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        <app-person *ngFor="let p of people | search:query" [person]="p" (delete)="onPersonDelete($event)"></app-person>
+        <!-- <tr *ngFor="let p of people | search:query" appColors [ngClass]="{ 'status-style': p.status}" id="bodyRow">
+        <app-person [person]="p" (delete)="onPersonDelete($event)"></app-person>
+        </tr> -->
+    </tbody>
+</table>
+
+<a routerLink="/person/add" class="createReport">CREATE NUISANCE REPORT</a>

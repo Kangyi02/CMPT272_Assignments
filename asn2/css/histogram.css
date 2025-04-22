@@ -1,0 +1,99 @@
+body {
+    background-color: #A6192E;
+    display: flex;
+    min-height: 100vh;  /*view point height*/
+}
+
+main {
+    background-color: white;
+    margin: 30px 30px 30px 30px;
+    padding: 20px 20px 20px 20px;
+    flex-grow: 1;
+}
+
+header {
+    margin-bottom: 10px;
+}
+
+section {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.title {
+    margin-bottom: 0.1em; 
+}
+
+.firstPart {
+    background-color: #e9eef1;
+    margin-bottom: 20px;
+}
+
+.firstTable {
+    border-spacing: 0 15px;
+    text-align: left;
+    padding-left: 40px;
+    padding-bottom: 20px;
+}
+
+.tableName {
+    color: #A6192E;
+    padding-top: 15px;
+    padding-left: 15px;
+}
+
+.firstTable td {
+    padding-right: 100px;
+}
+
+.firstTable input {
+    text-align:center;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    font-weight:200;
+    width: 90px;
+    height:28px;
+    display: block;
+}
+
+.rightContainer {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+    width: 500px;
+}
+
+.secondPart {
+    margin-left: 20px;
+    background-color: #e9eef1;
+    margin-bottom: 20px;
+}
+
+.secondTable {
+    border-spacing: 0 15px;
+    text-align: left;
+    padding-left: 40px;
+    padding-bottom: 20px;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+}
+
+.secondTable td {
+    padding-right: 100px;
+}
+
+.thirdPart {
+    margin-left: 20px;
+    background-color: #e9eef1;
+
+}
+
+.thirdTable {
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    border-spacing: 0 15px;
+    text-align: left;
+    padding-left: 50px;
+    padding-bottom: 20px;
+}
+
+.thirdTable td {
+    padding-right: 100px;
+}

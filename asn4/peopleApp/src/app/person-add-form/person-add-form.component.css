@@ -1,0 +1,22 @@
+h3 {
+    text-align: left;
+    font-family: "Comic Sans MS", cursive, sans-serif;
+    color: rgb(161, 195, 228);
+}
+
+fieldset {
+    background-color: white;
+    font-family: "Comic Sans MS", cursive, sans-serif;
+    color: rgb(161, 195, 228);
+    margin-top: 1px;
+}
+
+input {
+    font-family: "Comic Sans MS", cursive, sans-serif;
+    color: rgb(161, 195, 228);
+    width: 700px;
+}
+
+button {
+    width: 700px;
+}

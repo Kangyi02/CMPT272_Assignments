@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>histogram generator</title>
+    <link rel="stylesheet" href="./css/histogram.css">
+    <script src="calculate.js"></script>
+</head>
+
+<body onload="init()">
+
+    <main>
+        <header>
+            <h1 class="title">Histogram generator</h1>
+            <input type="file" id="fileInput"/>
+        </header>
+        <section>
+            <div class="firstPart">
+                <h3 class="tableName">Lower bounds</h3>
+                <table class="firstTable">
+                    <tr>
+                        <td>Max</td>
+                        <td><input type="text" value="100.00" id="maxLabel"></td>
+                    </tr>
+                    <tr>
+                        <td>A+</td>
+                        <td><input type="text" value="95.00" id="aPlusLabel"></td>
+                    </tr>
+                    <tr>
+                        <td>A</td>
+                        <td><input type="text" value="90.00" id="aLabel"></td>
+                    </tr>
+                    <tr>
+                        <td>A-</td>
+                        <td><input type="text" value="85.00" id="aMinusLabel"></td>
+                    </tr>
+                    <tr>
+                        <td>B+</td>
+                        <td><input type="text" value="80.00" id="bPlusLabel"></td>
+                    </tr>
+                    <tr>
+                        <td>B</td>
+                        <td><input type="text" value="75.00" id="bLabel"></td>
+                    </tr>
+                    <tr>
+                        <td>B-</td>
+                        <td><input type="text" value="70.00" id="bMinusLabel"></td>
+                    </tr>
+                    <tr>
+                        <td>C+</td>
+                        <td><input type="text" value="65.00" id="cPlusLabel"></td>
+                    </tr>
+                    <tr>
+                        <td>C</td>
+                        <td><input type="text" value="60.00" id="cLabel"></td>
+                    </tr>
+                    <tr>
+                        <td>C-</td>
+                        <td><input type="text" value="55.00" id="cMinusLabel"></td>
+                    </tr>
+                    <tr>
+                        <td>D</td>
+                        <td><input type="text" value="50.00" id="dLabel"></td>
+                    </tr>
+                    <tr>
+                        <td>F</td>
+                        <td><input type="text" value="0.00" id="fLabel"></td>
+                    </tr>
+                </table>
+            </div>
+
+            <div class="rightContainer">
+                <div class="secondPart">
+                    <h3 class="tableName">Histogram</h3>
+                    <table class="secondTable">
+                        <tr>
+                            <td>A+</td>
+                            <td id="A+"></td>
+                        </tr>
+                        <tr>
+                            <td>A</td>
+                            <td id="A"></td>
+                        </tr>
+                        <tr>
+                            <td>A-</td>
+                            <td id="A-"></td>
+                        </tr>
+                        <tr>
+                            <td>B+</td>
+                            <td id="B+"></td>
+                        </tr>
+                        <tr>
+                            <td>B</td>
+                            <td id="B"></td>
+                        </tr>
+                        <tr>
+                            <td>B-</td>
+                            <td id="B-"></td>
+                        </tr>
+                        <tr>
+                            <td>C+</td>
+                            <td id="C+"></td>
+                        </tr>
+                        <tr>
+                            <td>C</td>
+                            <td id="C"></td>
+                        </tr>
+                        <tr>
+                            <td>C-</td>
+                            <td id="C-"></td>
+                        </tr>
+                        <tr>
+                            <td>D</td>
+                            <td id="D"></td>
+                        </tr>
+                        <tr>
+                            <td>F</td>
+                            <td id="F"></td>
+                        </tr>
+                    </table>
+                </div>
+
+
+                <div class="thirdPart">
+                    <h3 class="tableName">Stats</h3>
+                    <table class="thirdTable">
+                        <tr>
+                            <td>Highest</td>
+                            <td id="highest">0</td>
+                        </tr>
+                        <tr>
+                            <td>Lowest</td>
+                            <td id="lowest">0</td>
+                        </tr>
+                        <tr>
+                            <td>Mean</td>
+                            <td id="mean">0</td>
+                        </tr>
+                        <tr>
+                            <td>Median</td>
+                            <td id="median">0</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </section>
+    </main>
+</body>
+
+</html>

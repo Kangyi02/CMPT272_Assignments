@@ -1,0 +1,40 @@
+.body {
+    background-color:rgb(100, 151, 191);
+}
+
+main {
+    background-color:hsl(207, 70%, 78%);
+    margin-top: 50px;
+    margin-bottom: 20px;
+    width: 1000px;  
+    height: 60%; 
+}
+
+h3 {
+    font-family:fantasy;
+}
+
+.name {
+    font-family:fantasy;
+    text-align: center;
+}
+
+div {
+    padding-left: 20px;
+    font-family:fantasy;
+    border-radius: 10%;
+}
+
+table {
+    border-collapse:collapse;
+    font-family:fantasy;
+}
+
+th, td {
+    text-align:center;
+    border:1px solid black;
+    padding:10px
+}
+
+
+

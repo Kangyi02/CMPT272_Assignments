@@ -1,0 +1,35 @@
+h3 {
+    text-align: left;
+    font-family: "Comic Sans MS", cursive, sans-serif;
+    color: rgb(161, 195, 228);
+}
+
+label {
+    font-family: "Comic Sans MS", cursive, sans-serif;
+    color: rgb(161, 195, 228);
+    padding-top: 20px;
+    display: flex;
+    margin-left: 20px;
+}
+
+input {
+    font-family: "Comic Sans MS", cursive, sans-serif;
+    color: rgb(195, 199, 202);
+    margin-left: 20px;
+}
+
+button {
+    font-family: "Comic Sans MS", cursive, sans-serif;
+    background-color: rgb(161, 195, 228);
+    color: white;
+    font-size:large;
+    border-radius: 5%;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+   }
+
+div {
+    background-color: white;
+}

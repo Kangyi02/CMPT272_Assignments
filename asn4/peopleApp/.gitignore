@@ -1,0 +1,11 @@
+# Node dependencies
+node_modules/
+
+# Angular build output
+dist/
+.out/
+.vercel/
+
+# Environment files
+.env
+.angular/cache/
